@@ -25,7 +25,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Reverse">Application</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Reverse">Palendrome</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="GitHub">GitHub</a>
@@ -42,9 +42,11 @@
             </div>
         </nav>
     </header>
-        <main role="main" class="pb-3">
+
+        <main id="content" class="flex-shrink-0">
             @RenderBody()
         </main>
+
     @* *** Footer *** *@
     <footer class="border-top footer text-muted">
         <div class="container">

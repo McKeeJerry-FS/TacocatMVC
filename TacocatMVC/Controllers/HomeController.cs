@@ -56,10 +56,15 @@ namespace TacocatMVC.Controllers
             revWord = Regex.Replace(revWord.ToLower(), "[^a-zA-Z0-9]+", "");
             inputWord = Regex.Replace(inputWord.ToLower(), "[^a-zA-Z0-9]+", "");
 
-            if (revWord==inputWord)
+            if (revWord == inputWord)
             {
                 palindrome.IsPalindrome = true;
                 palindrome.Message = $"Sucess! {palindrome.InputWord} is a palindrome!";
+            }
+            else
+            {
+                palindrome.IsPalindrome = false;
+                palindrome.Message = $"Sorry, {palindrome.InputWord} is not a palindrome.";
             }
 
             return View(palindrome);
